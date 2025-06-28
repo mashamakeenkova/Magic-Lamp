@@ -3,7 +3,7 @@ Create your own awesome color-changing, 3D-printed lamp! Follow this simple tuto
 TODO: add final result picture
 
 ## Required Materials
-- 3D printer
+- FDM 3D printer
 - 1 Arduino Nano
 - 1 Push button
 - 1 mini-USB cable
