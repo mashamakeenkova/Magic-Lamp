@@ -1,4 +1,5 @@
 # Magic Lamp
+TODO: add final result picture
 
 ## Required Materials
 - 1 Arduino Nano
@@ -6,6 +7,7 @@
 - 1 mini-USB cable
 - jumper cables
 - NeoPixel compatible LED strip, 5V. Note that if you want to use many LEDs, you may need to add a battery to power your circuit.
+- Arduino IDE with the FastLED library installed
   
 ## Tutorial
 ### Step 1 - Creating the circuit
