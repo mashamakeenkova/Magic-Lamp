@@ -1,7 +1,9 @@
 # Magic Lamp
+Create your own awesome color-changing, 3D-printed lamp! Follow this simple tutorial to make the circuit, program the LEDs, 3D-print the lamp casing, and assemble a cool project!
 TODO: add final result picture
 
 ## Required Materials
+- 3D printer
 - 1 Arduino Nano
 - 1 Push button
 - 1 mini-USB cable
