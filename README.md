@@ -16,7 +16,7 @@ We will use the following diagram for our circuit. To connect the LED strip, sol
 
 ### Step 2 - Basic Code Setup
 To program our LEDs, we will use the `FastLED` library. In the Arduino IDE, you can include the corresponding header file using `#include<FastLED.h>`. It may make sense to define some metrics at this stage that will not change for different light designs, such as the pins used and the number of LEDs on the strip that you have connected.
-```
+```cpp
 #define NUM_LEDS 8    // number of LEDs present in your strip
 #define BUTTON_PIN 2  // pin for the button
 #define DATA_PIN 12   // data pin for the LED strip
