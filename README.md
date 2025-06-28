@@ -36,6 +36,8 @@ void setup() {
 ```
 Now that the setup is complete, you can write the `loop` function that is executed repeatedly while the Arduino is on. This is the function where you would want to check if a button is pressed, and react to such actions. For some ideas regarding possible designs, have a look at the `/code-examples` directory.
 
+To compile your design and upload it to the Arduino, plug the Arduino into a USB port on your computer using the mini-USB cable, and click the arrow button at the top left in the Arduino IDE. This step may take a couple of seconds. You can check the output at the bottom of your screen, any errors in your code will be shown there.
+
 ### Step 3 - 3D printing
 Go to the `stls` directory and download the STL files for your desired design. Each lamp is made up of 3 pieces: the top, the bottom, and the sides. Print the top in a white filament color, this is the part where we want the light to shine through. For the bottom and sides, print it in any other color of your choosing.
 TODO: add pictures
