@@ -24,7 +24,7 @@ To program our LEDs, we will use the `FastLED` library. In the Arduino IDE, you 
 CRGB leds[NUM_LEDS];  // array to access the individual LEDs
 ```
 Next, we want to define a setup function, which will run once when the program is loaded onto our Arduino. Here we want to define the kinds of pins we want to use and initialize the LEDs. 
-```
+```cpp
 void setup() {
   pinMode(DATA_PIN, OUTPUT);           // define LED as an output
   pinMode(BUTTON_PIN, INPUT_PULLUP);   // define button as input with pull-up so we don't need a resistor
