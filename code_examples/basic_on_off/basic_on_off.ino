@@ -19,6 +19,7 @@ void setup() {
 
 
 void loop() {
+   Serial.print(69);
    if (!digitalRead(BUTTON_PIN) == true) {
     status = !status;
     toggle(status);
