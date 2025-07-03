@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include<FastLED.h>
 
-#define NUM_LEDS 8    // number of led present in your strip
+#define NUM_LEDS 2    // number of led present in your strip
 #define BUTTON_PIN 2  // pin for the button
 #define DATA_PIN 12   // digital pin of your arduino
 
