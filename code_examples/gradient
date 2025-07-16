@@ -1,0 +1,81 @@
+#include <FastLED.h>
+
+#define NUM_LEDS 8
+#define DATA_PIN 12
+#define BUTTON_PIN 2 //TODO
+int index = 0;
+
+bool led_an = false;         // sind die LEDs an?
+bool button_war = HIGH;      // waren sie vor Knopfdruck an?
+bool button_ist = LOW;
+
+CRGB leds[NUM_LEDS];
+CRGB colors[NUM_LEDS] = {
+  CRGB::Magenta,
+  CRGB::Purple,
+  CRGB::Blue,
+  CRGB::Cyan,
+  CRGB::Green,
+  CRGB::Yellow,
+  CRGB::Orange,
+  CRGB::Red
+};
+
+void setup() {
+  FastLED.addLeds<WS2812, DATA_PIN, GRB>(leds, NUM_LEDS);
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
+  FastLED.show();
+  // sets the first LED of the strip to a red color
+
+  FastLED.addLeds<WS2812, DATA_PIN, GRB>(leds, NUM_LEDS);
+}
+  /*
+  //code hier
+  leds[0]=CRGB::Magenta;
+  leds[1]=CRGB::Purple;
+  leds[2]=CRGB::Blue;
+  leds[3]=CRGB::Cyan;
+  leds[4]=CRGB::Green;
+  leds[5]=CRGB::Yellow;
+  leds[6]=CRGB::Orange;
+  leds[7]=CRGB::Red;
+  FastLED.show();
+}
+*/
+
+void loop() {
+  button_ist = digitalRead(BUTTON_PIN);
+  if (led_an) checkLeds();
+  if (button_war == HIGH && button_ist == LOW) {
+    led_an = !led_an;
+    if (led_an) {
+      checkLeds();
+    } else {
+     turnOffLeds();
+    }
+    delay(500);
+  }
+  button_war = button_ist;
+}
+
+void checkLeds() {
+   for(int i = 0; i<NUM_LEDS; i++){
+      leds[i] = colors[(i+index) % 8];
+      FastLED.show();
+      delay(50);
+    }
+    index = (index + 1) % 8;
+}
+
+void turnOnLeds() {
+  for (int i = 0; i < NUM_LEDS; i++) {
+    leds[i] = CRGB::Red;
+  }
+  FastLED.show();
+  delay(500);
+}
+
+void turnOffLeds() {
+  FastLED.clear();
+  FastLED.show();
+}
