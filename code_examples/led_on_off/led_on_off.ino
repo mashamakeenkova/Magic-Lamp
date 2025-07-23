@@ -28,7 +28,7 @@ void loop() {
     } else {
      turnOffLeds();
     }
-    delay(50);
+    delay(500);
   }
   button_war = button_ist;
 }
